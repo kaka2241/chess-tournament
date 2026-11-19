@@ -282,6 +282,14 @@ footer b{color:var(--ink);font-family:var(--kufi)}
 .js .credit.in .name{animation:cardFlip .9s .3s cubic-bezier(.3,1.5,.5,1) forwards}
 .js .credit.in > div:nth-child(3) .name{animation-delay:.75s}
 @keyframes cardFlip{to{opacity:1;transform:none}}
+.credit .tg{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:4px 12px;border-radius:999px;background:#229ED9;color:#fff;
+  text-decoration:none;font-family:"Noto Serif",Georgia,serif;font-size:13.5px;direction:ltr;transition:transform .2s, box-shadow .2s}
+.credit .tg svg{width:14px;height:14px}
+.credit .tg:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(34,158,217,.35)}
+.js .credit .tg{opacity:0;transform:translateY(8px)}
+.js .credit.in .tg{animation:tgIn .5s 1.3s ease forwards}
+.js .credit.in > div:nth-child(3) .tg{animation-delay:1.7s}
+@keyframes tgIn{to{opacity:1;transform:none}}
 footer .walk{font-family:var(--fig);font-size:22px;display:inline-block;animation:walk 6s ease-in-out infinite;color:var(--ink)}
 @keyframes walk{0%,100%{transform:translateX(-40px)}50%{transform:translateX(40px)}}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--night);color:var(--marble);
@@ -353,7 +361,9 @@ footer .walk{font-family:var(--fig);font-size:22px;display:inline-block;animatio
     <div class="rules">
       <div class="rule reveal" style="--i:0"><span class="ic"><span>♟</span></span><div><h3>بۆ هەموو قۆناغەکانە</h3><p>قوتابیانی سەرجەم قۆناغەکان دەتوانن بەشدار بن.</p></div></div>
       <div class="rule reveal" style="--i:1"><span class="ic"><span>♞</span></span><div><h3>سیستەمی سویسری <span class="lat">(Swiss System)</span></h3><p>یارییەکان بە شێوازی سویسری بەڕێوە دەچن (بەبێ دەرکردنی یەکدەستە / <span class="lat">No Elimination</span>)، واتە هەمووان دەرفەتی یاریکردنی زیاتریان دەبێت.</p></div></div>
-      <div class="rule reveal" style="--i:2"><span class="ic"><span>♚</span></span><div><h3>ماوەی پاڵەوانێتی</h3><p>لە ماوەی دوو ڕۆژدا بەڕێوە دەچێت و پێویستە بەشداربووان لە هەردوو ڕۆژەکەدا ئامادە بن.</p></div></div>
+      <div class="rule reveal" style="--i:2"><span class="ic"><span style="font-family:var(--kufi);font-weight:900">٧</span></span><div><h3>٧ گەڕ بۆ هەموو یاریزانێک</h3><p>هەموو یاریزانێک لە کۆی هەردوو ڕۆژەکەدا ٧ گەڕ یاری دەکات.</p></div></div>
+      <div class="rule reveal" style="--i:3"><span class="ic"><span>⏱</span></span><div><h3>شێوازی یاری: ڕاپید <span class="lat">(Rapid)</span></h3><p>یارییەکان بە شێوازی ڕاپید (یاری خێرا) بەڕێوە دەچن.</p></div></div>
+      <div class="rule reveal" style="--i:4"><span class="ic"><span>♚</span></span><div><h3>ماوەی پاڵەوانێتی</h3><p>لە ماوەی دوو ڕۆژدا بەڕێوە دەچێت و پێویستە بەشداربووان لە هەردوو ڕۆژەکەدا ئامادە بن.</p></div></div>
     </div>
     <div class="swiss reveal" id="swiss">
       <button type="button" aria-expanded="false" aria-controls="swissPanel" id="swissBtn">سیستەمی سویسری چۆن کار دەکات؟ <span class="chev">⌄</span></button>
@@ -440,8 +450,8 @@ footer .walk{font-family:var(--fig);font-size:22px;display:inline-block;animatio
   زانکۆی هەولێری پزیشکی — هیوای سەرکەوتن و یارییەکی خۆش بۆ هەموو لایەک!
   <div class="credit reveal">
     <span class="hopper" aria-hidden="true">♞</span>
-    <div>دیزاین و دروستکردنی ماڵپەڕ<span class="name">یوسف ڕۆژبەیانی</span></div>
-    <div>بەڕێوەبردن<span class="name">نهێن زانا</span></div>
+    <div>دیزاین و دروستکردنی ماڵپەڕ<span class="name">یوسف ڕۆژبەیانی</span><a class="tg" href="https://t.me/kaka2241" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.6 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.5 3.2c.9-.3 1.6.2 1.4 1.1z"/></svg>@kaka2241</a></div>
+    <div>بەڕێوەبردن<span class="name">نهێن زانا</span><a class="tg" href="https://t.me/nihennn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.6 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.5 3.2c.9-.3 1.6.2 1.4 1.1z"/></svg>@nihennn</a></div>
   </div>
 </footer>
 <div class="toast" id="toast"></div>
